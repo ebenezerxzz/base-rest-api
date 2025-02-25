@@ -28,11 +28,5 @@ export class UserService {
         return this.userRepository.save(user)
     }
 
-    async deleteRegister(id: number): Promise<UserRegisters> {
-        const entity = await this.userRepository.findOne({ id });
-        
-        if(entity){
-            await this.userRepository.remove(entity)
-        }
-    }
+    //FUNCTION FOR CREATE SERVICE OF REGISTER USERS
 }
